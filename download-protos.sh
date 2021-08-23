@@ -23,12 +23,14 @@ function download_source {
 
 function copy_proto_files {
 	echo "Copying proto files"
+	local well_known_excludes="any duration maps struct empty type source_context json_format_proto3 wrappers generated_code timestamp_duration timestamp field_mask"
 	[ -d "$2" ] || { echo "Directory '$2' does not exist" && return 1 }
 
 	for file in $(find "$1" -name '*.proto' -not -name '*test*' -exec grep -il proto3 {} +); do
 		cp -vf "$file" "$2/"
 	done
 }
+
 
 rm -rf ./src/Protobuf3/*.proto
 workdir=$(download_source) 
