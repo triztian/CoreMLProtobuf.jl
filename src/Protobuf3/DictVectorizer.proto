@@ -8,7 +8,7 @@ option optimize_for = LITE_RUNTIME;
 
 import public "DataStructures.proto";
 
-package CoreML.Specification;
+package CoreMLProtobuf.Specification;
 
 /**
  * Uses an index mapping to convert a dictionary to an array.

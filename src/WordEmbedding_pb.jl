@@ -1,7 +1,7 @@
 # syntax: proto3
 using ProtoBuf
 import ProtoBuf.meta
-import ._ProtoBuf_Top_.CoreML
+import ._ProtoBuf_Top_.CoreMLProtobuf
 
 mutable struct WordEmbedding <: ProtoType
     __protobuf_jl_internal_meta::ProtoMeta

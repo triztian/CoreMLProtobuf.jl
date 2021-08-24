@@ -61,7 +61,7 @@ option optimize_for = LITE_RUNTIME;
 import public "DataStructures.proto";
 import public "Parameters.proto";
 
-package CoreML.Specification;
+package CoreMLProtobuf.Specification;
 
 
 enum NeuralNetworkMultiArrayShapeMapping {

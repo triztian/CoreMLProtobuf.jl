@@ -1,7 +1,7 @@
 # syntax: proto3
 using ProtoBuf
 import ProtoBuf.meta
-import ._ProtoBuf_Top_.CoreML
+import ._ProtoBuf_Top_.CoreMLProtobuf
 
 mutable struct TextClassifier <: ProtoType
     __protobuf_jl_internal_meta::ProtoMeta
@@ -29,7 +29,7 @@ function meta(::Type{TextClassifier})
         if !isassigned(__meta_TextClassifier)
             __meta_TextClassifier[] = target = ProtoMeta(TextClassifier)
             fnum = Int[1,10,100,200]
-            allflds = Pair{Symbol,Union{Type,String}}[:revision => UInt32, :language => AbstractString, :modelParameterData => Vector{UInt8}, :stringClassLabels => CoreML.Specification.StringVector]
+            allflds = Pair{Symbol,Union{Type,String}}[:revision => UInt32, :language => AbstractString, :modelParameterData => Vector{UInt8}, :stringClassLabels => CoreMLProtobuf.Specification.StringVector]
             oneofs = Int[0,0,0,1]
             oneof_names = Symbol[Symbol("ClassLabels")]
             meta(target, TextClassifier, allflds, ProtoBuf.DEF_REQ, fnum, ProtoBuf.DEF_VAL, ProtoBuf.DEF_PACK, ProtoBuf.DEF_WTYPES, oneofs, oneof_names)
@@ -45,7 +45,7 @@ function Base.getproperty(obj::TextClassifier, name::Symbol)
     elseif name === :modelParameterData
         return (obj.__protobuf_jl_internal_values[name])::Vector{UInt8}
     elseif name === :stringClassLabels
-        return (obj.__protobuf_jl_internal_values[name])::CoreML.Specification.StringVector
+        return (obj.__protobuf_jl_internal_values[name])::CoreMLProtobuf.Specification.StringVector
     else
         getfield(obj, name)
     end

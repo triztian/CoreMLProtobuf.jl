@@ -6,7 +6,7 @@
 syntax = "proto3";
 option optimize_for = LITE_RUNTIME;
 
-package CoreML.Specification.CoreMLModels;
+package CoreMLProtobuf.Specification.CoreMLModels;
 
 /**
 * A model which takes audio signal samples as input and outputs an array of

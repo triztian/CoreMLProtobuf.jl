@@ -7,7 +7,7 @@ syntax = "proto3";
 option optimize_for = LITE_RUNTIME;
 import public "Parameters.proto";
 
-package CoreML.Specification;
+package CoreMLProtobuf.Specification;
 
 /**
  * A model which wraps another (compiled) model external to this one

@@ -1,7 +1,7 @@
 # syntax: proto3
 using ProtoBuf
 import ProtoBuf.meta
-import ..CoreML
+import ..CoreMLProtobuf
 
 mutable struct FeatureDescription <: ProtoType
     __protobuf_jl_internal_meta::ProtoMeta
@@ -371,7 +371,7 @@ function meta(::Type{Model})
         if !isassigned(__meta_Model)
             __meta_Model[] = target = ProtoMeta(Model)
             fnum = Int[1,2,10,200,201,202,300,301,302,303,304,400,401,402,403,404,500,501,555,556,600,601,602,603,604,606,607,609,610,900,2000,2001,2002,2003,2004,2005,3000]
-            allflds = Pair{Symbol,Union{Type,String}}[:specificationVersion => Int32, :description => ModelDescription, :isUpdatable => Bool, :pipelineClassifier => PipelineClassifier, :pipelineRegressor => PipelineRegressor, :pipeline => Pipeline, :glmRegressor => GLMRegressor, :supportVectorRegressor => SupportVectorRegressor, :treeEnsembleRegressor => TreeEnsembleRegressor, :neuralNetworkRegressor => NeuralNetworkRegressor, :bayesianProbitRegressor => BayesianProbitRegressor, :glmClassifier => GLMClassifier, :supportVectorClassifier => SupportVectorClassifier, :treeEnsembleClassifier => TreeEnsembleClassifier, :neuralNetworkClassifier => NeuralNetworkClassifier, :kNearestNeighborsClassifier => KNearestNeighborsClassifier, :neuralNetwork => NeuralNetwork, :itemSimilarityRecommender => ItemSimilarityRecommender, :customModel => CustomModel, :linkedModel => LinkedModel, :oneHotEncoder => OneHotEncoder, :imputer => Imputer, :featureVectorizer => FeatureVectorizer, :dictVectorizer => DictVectorizer, :scaler => Scaler, :categoricalMapping => CategoricalMapping, :normalizer => Normalizer, :arrayFeatureExtractor => ArrayFeatureExtractor, :nonMaximumSuppression => NonMaximumSuppression, :identity => Identity, :textClassifier => CoreML.Specification.CoreMLModels.TextClassifier, :wordTagger => CoreML.Specification.CoreMLModels.WordTagger, :visionFeaturePrint => CoreML.Specification.CoreMLModels.VisionFeaturePrint, :soundAnalysisPreprocessing => CoreML.Specification.CoreMLModels.SoundAnalysisPreprocessing, :gazetteer => CoreML.Specification.CoreMLModels.Gazetteer, :wordEmbedding => CoreML.Specification.CoreMLModels.WordEmbedding, :serializedModel => SerializedModel]
+            allflds = Pair{Symbol,Union{Type,String}}[:specificationVersion => Int32, :description => ModelDescription, :isUpdatable => Bool, :pipelineClassifier => PipelineClassifier, :pipelineRegressor => PipelineRegressor, :pipeline => Pipeline, :glmRegressor => GLMRegressor, :supportVectorRegressor => SupportVectorRegressor, :treeEnsembleRegressor => TreeEnsembleRegressor, :neuralNetworkRegressor => NeuralNetworkRegressor, :bayesianProbitRegressor => BayesianProbitRegressor, :glmClassifier => GLMClassifier, :supportVectorClassifier => SupportVectorClassifier, :treeEnsembleClassifier => TreeEnsembleClassifier, :neuralNetworkClassifier => NeuralNetworkClassifier, :kNearestNeighborsClassifier => KNearestNeighborsClassifier, :neuralNetwork => NeuralNetwork, :itemSimilarityRecommender => ItemSimilarityRecommender, :customModel => CustomModel, :linkedModel => LinkedModel, :oneHotEncoder => OneHotEncoder, :imputer => Imputer, :featureVectorizer => FeatureVectorizer, :dictVectorizer => DictVectorizer, :scaler => Scaler, :categoricalMapping => CategoricalMapping, :normalizer => Normalizer, :arrayFeatureExtractor => ArrayFeatureExtractor, :nonMaximumSuppression => NonMaximumSuppression, :identity => Identity, :textClassifier => CoreMLProtobuf.Specification.CoreMLModels.TextClassifier, :wordTagger => CoreMLProtobuf.Specification.CoreMLModels.WordTagger, :visionFeaturePrint => CoreMLProtobuf.Specification.CoreMLModels.VisionFeaturePrint, :soundAnalysisPreprocessing => CoreMLProtobuf.Specification.CoreMLModels.SoundAnalysisPreprocessing, :gazetteer => CoreMLProtobuf.Specification.CoreMLModels.Gazetteer, :wordEmbedding => CoreMLProtobuf.Specification.CoreMLModels.WordEmbedding, :serializedModel => SerializedModel]
             oneofs = Int[0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
             oneof_names = Symbol[Symbol("Type")]
             meta(target, Model, allflds, ProtoBuf.DEF_REQ, fnum, ProtoBuf.DEF_VAL, ProtoBuf.DEF_PACK, ProtoBuf.DEF_WTYPES, oneofs, oneof_names)
@@ -441,17 +441,17 @@ function Base.getproperty(obj::Model, name::Symbol)
     elseif name === :identity
         return (obj.__protobuf_jl_internal_values[name])::Identity
     elseif name === :textClassifier
-        return (obj.__protobuf_jl_internal_values[name])::CoreML.Specification.CoreMLModels.TextClassifier
+        return (obj.__protobuf_jl_internal_values[name])::CoreMLProtobuf.Specification.CoreMLModels.TextClassifier
     elseif name === :wordTagger
-        return (obj.__protobuf_jl_internal_values[name])::CoreML.Specification.CoreMLModels.WordTagger
+        return (obj.__protobuf_jl_internal_values[name])::CoreMLProtobuf.Specification.CoreMLModels.WordTagger
     elseif name === :visionFeaturePrint
-        return (obj.__protobuf_jl_internal_values[name])::CoreML.Specification.CoreMLModels.VisionFeaturePrint
+        return (obj.__protobuf_jl_internal_values[name])::CoreMLProtobuf.Specification.CoreMLModels.VisionFeaturePrint
     elseif name === :soundAnalysisPreprocessing
-        return (obj.__protobuf_jl_internal_values[name])::CoreML.Specification.CoreMLModels.SoundAnalysisPreprocessing
+        return (obj.__protobuf_jl_internal_values[name])::CoreMLProtobuf.Specification.CoreMLModels.SoundAnalysisPreprocessing
     elseif name === :gazetteer
-        return (obj.__protobuf_jl_internal_values[name])::CoreML.Specification.CoreMLModels.Gazetteer
+        return (obj.__protobuf_jl_internal_values[name])::CoreMLProtobuf.Specification.CoreMLModels.Gazetteer
     elseif name === :wordEmbedding
-        return (obj.__protobuf_jl_internal_values[name])::CoreML.Specification.CoreMLModels.WordEmbedding
+        return (obj.__protobuf_jl_internal_values[name])::CoreMLProtobuf.Specification.CoreMLModels.WordEmbedding
     elseif name === :serializedModel
         return (obj.__protobuf_jl_internal_values[name])::SerializedModel
     else

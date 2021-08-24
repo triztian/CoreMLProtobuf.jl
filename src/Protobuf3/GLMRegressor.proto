@@ -6,7 +6,7 @@
 syntax = "proto3";
 option optimize_for = LITE_RUNTIME;
 
-package CoreML.Specification;
+package CoreMLProtobuf.Specification;
 
 /**
  * A generalized linear model regressor.

@@ -1,5 +1,39 @@
 module CoreMLProtobuf
-
-greet() = print("Hello World!")
-
-end # module
+  const _ProtoBuf_Top_ = @static isdefined(parentmodule(@__MODULE__), :_ProtoBuf_Top_) ? (parentmodule(@__MODULE__))._ProtoBuf_Top_ : parentmodule(@__MODULE__)
+  module Specification
+    const _ProtoBuf_Top_ = @static isdefined(parentmodule(@__MODULE__), :_ProtoBuf_Top_) ? (parentmodule(@__MODULE__))._ProtoBuf_Top_ : parentmodule(@__MODULE__)
+    include("ArrayFeatureExtractor_pb.jl")
+    include("BayesianProbitRegressor_pb.jl")
+    include("FeatureTypes_pb.jl")
+    include("DataStructures_pb.jl")
+    include("CategoricalMapping_pb.jl")
+    include("CustomModel_pb.jl")
+    include("DictVectorizer_pb.jl")
+    include("FeatureVectorizer_pb.jl")
+    include("GLMClassifier_pb.jl")
+    include("GLMRegressor_pb.jl")
+    include("Identity_pb.jl")
+    include("Imputer_pb.jl")
+    include("ItemSimilarityRecommender_pb.jl")
+    include("Parameters_pb.jl")
+    include("LinkedModel_pb.jl")
+    include("NearestNeighbors_pb.jl")
+    include("NeuralNetwork_pb.jl")
+    include("Normalizer_pb.jl")
+    include("OneHotEncoder_pb.jl")
+    include("Scaler_pb.jl")
+    include("NonMaximumSuppression_pb.jl")
+    include("SVM_pb.jl")
+    include("TreeEnsemble_pb.jl")
+    module CoreMLModels
+      const _ProtoBuf_Top_ = @static isdefined(parentmodule(@__MODULE__), :_ProtoBuf_Top_) ? (parentmodule(@__MODULE__))._ProtoBuf_Top_ : parentmodule(@__MODULE__)
+      include("Gazetteer_pb.jl")
+      include("VisionFeaturePrint_pb.jl")
+      include("TextClassifier_pb.jl")
+      include("WordTagger_pb.jl")
+      include("WordEmbedding_pb.jl")
+      include("SoundAnalysisPreprocessing_pb.jl")
+    end
+    include("Model_pb.jl")
+  end
+end

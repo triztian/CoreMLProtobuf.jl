@@ -8,7 +8,7 @@ option optimize_for = LITE_RUNTIME;
 
 import public "FeatureTypes.proto";
 
-package CoreML.Specification;
+package CoreMLProtobuf.Specification;
 
 /**
  * A mapping from a string
