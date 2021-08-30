@@ -24,7 +24,7 @@ function copy_proto_files {
 	echo "Copying proto files"
 	[ -d "$2" ] || { echo "Directory '$2' does not exist" && return 1 }
 
-	for file in $(find "$1" -name '*.proto' -not -name '*test*' -not \( -type d -and -name google \) -exec grep -il proto3 {} +); do
+	for file in $(find "$1" -name '*.proto' -not -name '*test*' -exec grep -il proto3 {} +); do
 		cp -vf "$file" "$2/"
 	done
 

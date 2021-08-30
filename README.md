@@ -35,3 +35,6 @@ protoc \
 	--plugin=$HOME/.julia/packages/TYEdo/ProtoBuf/plugin/protoc-gen-julia \
 	-I=src/Protobuf3 --julia_out=src/ src/Protobuf3/*.proto
 ```
+
+  * [Generation Docs](https://github.com/JuliaIO/ProtoBuf.jl/blob/master/PROTOC.md)
+  * [Usage Docs](https://github.com/JuliaIO/ProtoBuf.jl/blob/master/USAGE.md)
