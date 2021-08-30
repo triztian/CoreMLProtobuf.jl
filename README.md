@@ -38,3 +38,16 @@ protoc \
 
   * [Generation Docs](https://github.com/JuliaIO/ProtoBuf.jl/blob/master/PROTOC.md)
   * [Usage Docs](https://github.com/JuliaIO/ProtoBuf.jl/blob/master/USAGE.md)
+
+
+### Using the generated files
+
+Some examples of how to use the generated files in another julia package:
+
+```julia
+using CoreMLProtobuf
+
+# To use the GLMRegressor or a Scaler
+CoreMLProtobuf.Specification.GLMRegressor
+CoreMLProtobuf.Specification.Scaler
+```
